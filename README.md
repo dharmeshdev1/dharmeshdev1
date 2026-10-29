@@ -16,14 +16,22 @@ agents whose failures are tested code paths
 evaluation numbers that come with confidence intervals
 
 dharmesh@ml:~$ ls projects/
-rag-eval-lab/   agentkit/   evalkit/
+microllm/   rag-eval-lab/   agentkit/   evalkit/
 
 dharmesh@ml:~$ _
 ```
 
-## Projects
+## Flagship
 
-Each project has no runtime dependencies, a test suite, lint and CI on Python 3.10 to 3.13, and a README that states its limitations.
+**[microllm](https://github.com/dharmeshdev1/microllm)** is a from-scratch LLM stack: byte-level BPE tokenizer, a decoder-only transformer (RoPE, grouped-query attention, SwiGLU, KV cache), a resumable training loop, and speculative decoding that provably samples from the target distribution.
+
+- Trained a 24.6M parameter model on TinyStories to 0.779 bits per byte on held-out stories, with a 2.5M draft model for speculative decoding (1.04x to 1.26x measured speedup).
+- 139 tests, including attention checked against a naive reference, a chi-square test that speculative samples match the target distribution, and bit-exact checkpoint resume.
+- The README reports its limitations and the results that did not flatter it.
+
+## More projects
+
+Each has no runtime dependencies, a test suite, lint and CI on Python 3.10 to 3.13, and a README that states its limitations.
 
 | Project | What it is | Highlights |
 | --- | --- | --- |
@@ -40,12 +48,13 @@ Each project has no runtime dependencies, a test suite, lint and CI on Python 3.
 ## Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
 ![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=flat-square&logo=ruff&logoColor=black)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square&logo=uv&logoColor=white)
 
-Topics I work on: retrieval and ranking, LLM evaluation, tool use and agents, experiment statistics.
+Topics I work on: language model internals and inference, retrieval and ranking, LLM evaluation, tool use and agents, experiment statistics.
 
 ## Contact
 
