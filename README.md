@@ -16,7 +16,7 @@ agents whose failures are tested code paths
 evaluation numbers that come with confidence intervals
 
 dharmesh@ml:~$ ls projects/
-microllm/   nanoserve/   rag-eval-lab/   agentkit/   evalkit/
+microllm/   nanoserve/   agenteval/   rag-eval-lab/   agentkit/   evalkit/
 
 dharmesh@ml:~$ _
 ```
@@ -34,6 +34,12 @@ dharmesh@ml:~$ _
 - Measured 2.0x to 4.4x higher throughput than serving requests one at a time, with median time to first token down from 4.0 s to 0.09 s, on a real trained model.
 - Its defining property is tested: a request's output is identical to running it alone, whatever else is in the batch and however often it is preempted.
 - Its own tests found real bugs in the server (a connection backlog reset, keep-alive corruption, a crash on malformed input), all fixed and documented.
+
+**[agenteval](https://github.com/dharmeshdev1/agenteval)** is a harness for evaluating AI agents on real tasks, built so that its scores can be trusted: agents work in a kernel-enforced sandbox and a hidden verifier they cannot read judges the result.
+
+- 12 real tasks (git, SQL, shell, build systems, refactoring, performance), each validated by the harness itself: a do-nothing agent fails, the reference solution passes, and 37 plausible wrong solutions are all rejected.
+- Defends against cheating and tests each defence with an actual attack: reading or editing the verifier, symlink escapes, planted files, standard library shadowing, editing protected tests, network access.
+- That validation found four weak verifiers in my own tasks before release, and CI found a gitignore bug that hid a task file. Both are fixed and written up in the README.
 
 ## More projects
 
@@ -60,7 +66,7 @@ Each has no runtime dependencies, a test suite, lint and CI on Python 3.10 to 3.
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square&logo=uv&logoColor=white)
 
-Topics I work on: language model internals and inference serving, retrieval and ranking, LLM evaluation, tool use and agents, experiment statistics.
+Topics I work on: language model internals and inference serving, agent evaluation and sandboxing, retrieval and ranking, LLM evaluation, experiment statistics.
 
 ## Contact
 
