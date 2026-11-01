@@ -1,27 +1,38 @@
-<h1 align="center">Dharmesh Meena</h1>
-<p align="center"><b>AI/ML engineer</b> &middot; LLM systems, retrieval, agents and evaluation</p>
+<p align="center"><img src="assets/hero.svg" alt="Dharmesh Meena, AI/ML engineer" width="100%"></p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/dharmeshmeena/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-dharmeshmeena-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
-  <img alt="Open to work" src="https://img.shields.io/badge/open%20to-AI%2FML%20roles-2ea44f?style=flat-square">
+  <a href="https://www.linkedin.com/in/dharmeshmeena/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-dharmeshmeena-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <img alt="Open to work" src="https://img.shields.io/badge/open%20to-AI%2FML%20roles-2ea44f?style=for-the-badge">
+  <a href="https://dharmeshdev1.github.io/unsaid/"><img alt="Try Unsaid" src="https://img.shields.io/badge/try-Unsaid%20live-1b2a8a?style=for-the-badge"></a>
 </p>
 
 ```console
-dharmesh@ml:~$ whoami
-Dharmesh Meena, AI/ML engineer
-
 dharmesh@ml:~$ cat focus.txt
 retrieval that is measured, not guessed
 agents whose failures are tested code paths
 evaluation numbers that come with confidence intervals
 
 dharmesh@ml:~$ ls projects/
-microllm/   nanoserve/   agenteval/   rag-eval-lab/   agentkit/   evalkit/
+unsaid/   microllm/   nanoserve/   agenteval/   rag-eval-lab/   agentkit/   evalkit/
 
 dharmesh@ml:~$ _
 ```
 
-## Flagship
+<p align="center"><img src="assets/divider.svg" alt="" width="100%"></p>
+
+## Newest
+
+<a href="https://github.com/dharmeshdev1/unsaid"><img src="assets/unsaid.svg" alt="Unsaid: search without saying what you're looking for" width="100%"></a>
+
+**[Unsaid](https://github.com/dharmeshdev1/unsaid)** is a search engine that cannot read your queries. The question is encrypted on your device with lattice cryptography (learning with errors), and the server ranks documents and returns them without learning the question or the results. It is one 4.5 MB Rust binary, and the same client runs in a browser through WebAssembly: **[try it live](https://dharmeshdev1.github.io/unsaid/)**.
+
+- Retrieves **95.8% of exact search quality** over 2.68 million passages (BEIR NQ), measured through the real protocol with real encryption, at 5.1 MB up, 320 KB down and 99 ms of server time per search.
+- Built from scratch: the encryption, a BERT encoder in safe Rust, balanced clustering, the server, an MCP tool for AI agents, and a Python tutorial client that interoperates with the Rust server from the protocol document alone.
+- Two adversarial reviews found real flaws (a crafted model file could reveal words in a query through a crash). They are fixed with regression tests, and the security notes say plainly that it has not had an independent audit.
+
+<p align="center"><img src="assets/divider.svg" alt="" width="100%"></p>
+
+## Flagships
 
 **[microllm](https://github.com/dharmeshdev1/microllm)** is a from-scratch LLM stack: byte-level BPE tokenizer, a decoder-only transformer (RoPE, grouped-query attention, SwiGLU, KV cache), a resumable training loop, and speculative decoding that provably samples from the target distribution.
 
@@ -41,6 +52,8 @@ dharmesh@ml:~$ _
 - Defends against cheating and tests each defence with an actual attack: reading or editing the verifier, symlink escapes, planted files, standard library shadowing, editing protected tests, network access.
 - That validation found four weak verifiers in my own tasks before release, and CI found a gitignore bug that hid a task file. Both are fixed and written up in the README.
 
+<p align="center"><img src="assets/divider.svg" alt="" width="100%"></p>
+
 ## More projects
 
 Each has no runtime dependencies, a test suite, lint and CI on Python 3.10 to 3.13, and a README that states its limitations.
@@ -59,6 +72,8 @@ Each has no runtime dependencies, a test suite, lint and CI on Python 3.10 to 3.
 
 ## Stack
 
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
@@ -66,8 +81,10 @@ Each has no runtime dependencies, a test suite, lint and CI on Python 3.10 to 3.
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square&logo=uv&logoColor=white)
 
-Topics I work on: language model internals and inference serving, agent evaluation and sandboxing, retrieval and ranking, LLM evaluation, experiment statistics.
+Topics I work on: private retrieval and applied cryptography, language model internals and inference serving, agent evaluation and sandboxing, retrieval and ranking, LLM evaluation, experiment statistics.
 
 ## Contact
 
 Message me on [LinkedIn](https://www.linkedin.com/in/dharmeshmeena/).
+
+<p align="center"><img src="assets/footer.svg" alt="" width="100%"></p>
