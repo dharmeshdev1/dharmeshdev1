@@ -3,19 +3,21 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/dharmeshmeena/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-dharmeshmeena-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <img alt="Open to work" src="https://img.shields.io/badge/open%20to-AI%2FML%20roles-2ea44f?style=for-the-badge">
+  <a href="https://dharmeshdev1.github.io/goldenhour/"><img alt="Goldenhour live" src="https://img.shields.io/badge/see-Goldenhour%20live-f2b33d?style=for-the-badge"></a>
   <a href="https://dharmeshdev1.github.io/mercalli/"><img alt="Mercalli live" src="https://img.shields.io/badge/see-Mercalli%20live-d7263d?style=for-the-badge"></a>
   <a href="https://dharmeshdev1.github.io/unsaid/"><img alt="Try Unsaid" src="https://img.shields.io/badge/try-Unsaid%20live-1b2a8a?style=for-the-badge"></a>
 </p>
 
 ```console
 dharmesh@ml:~$ cat focus.txt
+stolen money followed hop by hop, from chain data
 forecasts whose ranges hold their stated coverage
 retrieval that is measured, not guessed
 agents whose failures are tested code paths
 evaluation numbers that come with confidence intervals
 
 dharmesh@ml:~$ ls projects/
-mercalli/   unsaid/   microllm/   nanoserve/   agenteval/   rag-eval-lab/   agentkit/   evalkit/
+goldenhour/   mercalli/   unsaid/   microllm/   nanoserve/   agenteval/   rag-eval-lab/   agentkit/   evalkit/
 
 dharmesh@ml:~$ _
 ```
@@ -24,6 +26,18 @@ dharmesh@ml:~$ _
 
 ## Newest
 
+<a href="https://github.com/dharmeshdev1/goldenhour"><img src="assets/goldenhour.svg" alt="Goldenhour: the first hour after a crypto theft decides how much comes back" width="100%"></a>
+
+**[Goldenhour](https://github.com/dharmeshdev1/goldenhour)** is crypto theft response, from the signer to the last hop, built on the largest theft on record: about $6.4 billion taken from Binance on 29 October 2026. It refuses the malicious signature, detects a drain while it happens, measures the freeze window minute by minute, follows the stolen money across chains every five minutes, and lets exchanges screen deposits without revealing what they screen: **[see it live](https://dharmeshdev1.github.io/goldenhour/)**.
+
+- The Guard decodes what a signing request would actually do. Replayed on the real attack transaction, which carried 50 EIP-7702 authorizations signed by one Binance custody key for 50 consecutive nonces, it refuses all 50 and records each decision in a signed, hash-chained audit log.
+- The trace reads Ethereum, Bitcoin, Tron, the XRP Ledger and Solana directly, plus the THORChain and Relay swaps between them. As of 9 November it verifies $6.29 billion of the reported $6.43 billion on-chain, finds $2.55 billion frozen by Tether and Circle, and $2.99 billion still held at 921 addresses, every number tied to its transactions.
+- A review before launch found 25 real problems, among them screening that leaked up to six hash prefixes per lookup and a Solana parser that missed wrapped SOL. All are fixed with regression tests, and the pipeline refuses to deploy a site that is broken or suddenly smaller.
+
+<p align="center"><img src="assets/divider.svg" alt="" width="100%"></p>
+
+## Flagships
+
 <a href="https://github.com/dharmeshdev1/mercalli"><img src="assets/mercalli.svg" alt="Mercalli: what is broken, how long it will last, and what it will hit next" width="100%"></a>
 
 **[Mercalli](https://github.com/dharmeshdev1/mercalli)** is outage intelligence for the services you depend on. It watches about 900 public status pages (clouds, CDNs, developer tools, AI APIs, payments), forecasts how long each open incident will last with a calibrated range, predicts which other services an outage at a cloud or CDN will hit, and maps which DNS, edge network and cloud region the top 10,000 sites rely on: **[see it live](https://dharmeshdev1.github.io/mercalli/)**.
@@ -31,10 +45,6 @@ dharmesh@ml:~$ _
 - It runs itself: GitHub Actions polls every page about every five minutes and deploys the site, refreshes the incident history daily, and retrains, evaluates and signs the models every week. A self-hosted edition adds PostgreSQL, a live event stream and alerts to Slack, Teams, PagerDuty and webhooks, with Docker Compose and a Helm chart.
 - Tested on 11,390 incidents from 2026 held out from training, the forecaster beats the best simple rule (mean log error 1.26 against 1.35), and its 80% ranges contained the real outcome **80.4%** of the time, thanks to conformal calibration. The gain in point accuracy is modest, and the README says so.
 - A review before launch found 12 real problems, including a label leak that inflated one model's score and a path traversal through vendor incident ids. All twelve are fixed, and the leak and what it did to the numbers are written up in the methodology.
-
-<p align="center"><img src="assets/divider.svg" alt="" width="100%"></p>
-
-## Flagships
 
 <a href="https://github.com/dharmeshdev1/unsaid"><img src="assets/unsaid.svg" alt="Unsaid: search without saying what you're looking for" width="100%"></a>
 
